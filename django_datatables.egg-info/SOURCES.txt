@@ -1,0 +1,16 @@
+MANIFEST.in
+README.rst
+setup.py
+django_datatables/__init__.py
+django_datatables/admin.py
+django_datatables/apps.py
+django_datatables/models.py
+django_datatables/tables.py
+django_datatables/tests.py
+django_datatables.egg-info/PKG-INFO
+django_datatables.egg-info/SOURCES.txt
+django_datatables.egg-info/dependency_links.txt
+django_datatables.egg-info/requires.txt
+django_datatables.egg-info/top_level.txt
+django_datatables/templates/static.html
+django_datatables/templates/table.html

@@ -1,0 +1,12 @@
+<table id="{{ table.pk }}" class="table table-striped table-bordered" style="width: 100%">
+    <thead>
+    {{ table.html_header | safe}}
+    </thead>
+    {% if not table.is_ajax %}
+        <tbody>
+        {{ table.html_body | safe}}
+        </tbody>
+    {% endif %}
+
+</table>
+

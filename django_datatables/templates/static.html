@@ -1,0 +1,22 @@
+{% load  static %}
+
+<link rel="stylesheet" href="{% static table.get_dt_src_css  %}">
+
+{% if table.get_style != 'jquery' %}
+    <link rel="stylesheet" href="{% static table.get_fw_src_css  %}">
+{% endif %}
+
+{% if table.load_jquery %}
+    <script src="{% static 'dtables/js/jquery.min.js' %}"></script>
+{% endif %}
+
+<script src="{% static 'dtables/js/jquery.dataTables.min.js' %}"></script>
+<script src="{% static table.get_src_js %}"></script>
+
+<script>
+    const $ = jQuery;
+
+    $(document).ready(()=>{
+        $('#{{ table.pk }}').DataTable();
+    })
+</script>
