@@ -1,2 +1,6 @@
 include *.txt *.ini *.cfg *.rst
 recursive-include django_datatables *.ico *.png *.css *.gif *.jpg *.txt *.js *.html *.xml
+recursive-include django_datatables/static *
+recursive-include django_datatables/templates *
+recursive-include django_datatables/template_tags *
+recursive-include django_datatables/migrations *

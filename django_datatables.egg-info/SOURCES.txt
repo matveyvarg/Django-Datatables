@@ -12,5 +12,6 @@ django_datatables.egg-info/SOURCES.txt
 django_datatables.egg-info/dependency_links.txt
 django_datatables.egg-info/requires.txt
 django_datatables.egg-info/top_level.txt
+django_datatables/migrations/__init__.py
 django_datatables/templates/static.html
 django_datatables/templates/table.html
