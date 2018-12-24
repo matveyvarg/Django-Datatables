@@ -1,4 +1,3 @@
-from .models import Table as TableModel
 import random
 import string
 
