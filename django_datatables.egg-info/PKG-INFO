@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: django-datatables
-Version: 0.1
+Version: 0.2
 Summary: Fast way to implement datatables
 Home-page: https://github.com/yourname/django-datatables/
 Author: Matvei Vargasov
