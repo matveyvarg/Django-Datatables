@@ -15,3 +15,4 @@ django_datatables.egg-info/top_level.txt
 django_datatables/migrations/__init__.py
 django_datatables/templates/static.html
 django_datatables/templates/table.html
+django_datatables/templatetags/table_tags.py
