@@ -8,7 +8,7 @@ with open(os.path.join(BASE_DIR, 'README.rst')) as f:
 
 setup(
     name='django-datatables',
-    version='0.3',
+    version='0.3.1',
     packages=find_packages(),
     include_package_data=True,
     description='Fast way to implement datatables',
