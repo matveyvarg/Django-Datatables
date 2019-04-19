@@ -1,6 +1,7 @@
 import random
 import string
 
+
 class Table:
     # SLOTS
     __slots__ = [
@@ -67,7 +68,7 @@ class Table:
         return response
 
     # CONSTRUCTOR------------------------------------------------------------------------------------------------
-    def __init__(self, queryset, rows: list = [], is_ajax: bool = False, style: str = STYLE_BASE, load_jquery = False):
+    def __init__(self, queryset, rows: list = [], is_ajax: bool = False, style: str = STYLE_BASE, load_jquery=False):
         self.__queryset = queryset
         self.__is_ajax = is_ajax
         self.__style = style
