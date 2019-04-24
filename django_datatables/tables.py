@@ -2,6 +2,10 @@ import random
 import string
 
 
+class EmptyQueryset(Exception):
+    pass
+
+
 class Table:
     # SLOTS
     __slots__ = [
@@ -59,7 +63,6 @@ class Table:
         tds = []
         response = ""
         for item in self.__queryset:
-            print(item.__dict__)
             filled_td = (td * len(self.header)) \
                             .format(*[f"%({r})s" for r in self.header]) % \
                         {a: getattr(item, a) for a in dir(item) if not callable(a) and a in self.header}
@@ -68,7 +71,12 @@ class Table:
         return response
 
     # CONSTRUCTOR------------------------------------------------------------------------------------------------
-    def __init__(self, queryset, rows: list = [], is_ajax: bool = False, style: str = STYLE_BASE, load_jquery=False):
+    def __init__(self, queryset=None, rows: list = [], is_ajax: bool = False, style: str = STYLE_BASE, load_jquery=False):
+
+        # We need qs (might be empty, but not None) at least to get default rows
+        if queryset is None:
+            raise EmptyQueryset("Queryset is None")
+
         self.__queryset = queryset
         self.__is_ajax = is_ajax
         self.__style = style
@@ -82,7 +90,6 @@ class Table:
         else:
             self.__rows = rows
 
-        print(self.__rows)
 
     # OTHER METHODS
     def __get_header_tags(self):
